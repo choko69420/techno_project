@@ -7,4 +7,7 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  'editor.quickSuggestions': {
+    strings: true,
+  },
 }
