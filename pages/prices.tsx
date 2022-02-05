@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import Person from '../Components/Person'
-import React from 'react'
-//make Description interface
+//import PriceForm
+import PriceForm from '../Components/PriceForm'
 interface Description {
   src: string
   alt: string
@@ -39,6 +38,7 @@ export const Description: React.FC<Description> = ({
 }
 
 export default function Home(): JSX.Element {
+  const price = 199.99
   return (
     <>
       <Head>
@@ -46,24 +46,13 @@ export default function Home(): JSX.Element {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <span className="flex justify-center stroke-red-700 pt-4 text-5xl font-bold">
-        Techno Project
+        Prices
       </span>
-      <a href="/prices" className=" mt-3 block text-center text-xl">
-        prices
-      </a>
-      <Description
-        alt="Techno Logo"
-        title="This is Techno Office!"
-        src="https://scontent.ftbs5-3.fna.fbcdn.net/v/t1.6435-9/95768290_112581870445043_2767339023285354496_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=__mZUpIb7Y8AX_8K9HX&_nc_ht=scontent.ftbs5-3.fna&oh=00_AT_QA6q6OO-lBEQ9M0sw81gk-LGevY2ULcD4ofzDQUl8Pw&oe=62202322"
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-        perferendis odio, cupiditate est cumque eligendi ratione deleniti rerum
-        tempore veniam aperiam at optio expedita quas debitis nesciunt explicabo
-        modi placeat.
-      </Description>
-      <div className="flex justify-around">
-        <Person name={'Davit Chokoshvili'} job="programisti"></Person>
-        <Person name={'Davit Chokoshvili'} job="programisti"></Person>
+      <div className="flex h-fit p-4">
+        <PriceForm />
+        <div className="my-auto flex text-3xl font-bold">
+          Your Total is: {price}
+        </div>
       </div>
     </>
   )
