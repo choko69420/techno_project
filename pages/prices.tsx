@@ -7,25 +7,20 @@ interface Description {
   children?: React.ReactNode
   title: string
 }
-export const Description: React.FC<Description> = ({
-  title,
-  src,
-  alt,
-  children,
-}) => {
+export const Phone: React.FC<Description> = ({ title, src, alt, children }) => {
   return (
-    <div className="mx-auto mt-12 max-w-md overflow-hidden rounded-2xl bg-gray-200 shadow-xl md:max-h-56 md:max-w-5xl">
+    <div className="mx-auto mt-12  max-w-md overflow-hidden rounded-2xl bg-gray-200 shadow-xl md:max-h-56 md:max-w-xl">
       <div className="md:flex">
         <div className="md:shrink-0">
           <img
-            className="h-64 w-full object-cover md:h-full md:w-48"
+            className="h-full w-full object-cover md:h-full md:w-48"
             src={src}
-            alt="Techno Office logo"
+            alt={alt}
           />
         </div>
         <div className="p-8">
           <a
-            href="#"
+            href={src}
             className="mt-1 block text-lg font-medium leading-tight text-black hover:underline"
           >
             {title}
@@ -45,15 +40,18 @@ export default function Home(): JSX.Element {
         <title>Techno Project</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <span className="flex justify-center stroke-red-700 pt-4 text-5xl font-bold">
-        Prices
-      </span>
+
       <div className="flex h-fit p-4">
         <PriceForm />
         <div className="my-auto flex text-3xl font-bold">
           Your Total is: {price}
         </div>
       </div>
+      <Phone
+        title="This Iphone"
+        alt="phone"
+        src="https://i.insider.com/60117b551d2df20018b71117?width=1136&format=jpeg"
+      ></Phone>
     </>
   )
 }

@@ -15,7 +15,7 @@ export const Description: React.FC<Description> = ({
   children,
 }) => {
   return (
-    <div className="mx-auto mt-12 max-w-md overflow-hidden rounded-2xl bg-gray-200 shadow-xl md:max-h-56 md:max-w-5xl">
+    <div className="mx-auto mt-12 max-w-md overflow-hidden rounded-2xl bg-gray-200 shadow-xl sm:max-h-fit sm:max-w-md md:max-h-56 md:max-w-5xl">
       <div className="md:flex">
         <div className="md:shrink-0">
           <img
@@ -45,12 +45,10 @@ export default function Home(): JSX.Element {
         <title>Techno Project</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <span className="flex justify-center stroke-red-700 pt-4 text-5xl font-bold">
+      <span className="flex justify-center pt-20 text-5xl font-bold">
         Techno Project
       </span>
-      <a href="/prices" className=" mt-3 block text-center text-xl">
-        prices
-      </a>
+
       <Description
         alt="Techno Logo"
         title="This is Techno Office!"

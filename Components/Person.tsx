@@ -17,17 +17,21 @@ const Person: React.FC<Person> = ({ name, job }: Person) => {
 
         <div className="rounded-2xl bg-sky-700">
           <div className="container my-32 mx-auto p-1">
-            <div className="my-50 duration-400 relative max-h-60 overflow-hidden rounded-2xl bg-sky-500 p-8 align-middle shadow-xl transition ease-in hover:max-h-fit hover:overflow-visible hover:bg-blue-400">
+            <div className="my-50 duration-400 max-h-60 overflow-hidden rounded-2xl bg-sky-500 p-8 align-middle shadow-xl transition ease-in hover:max-h-fit hover:overflow-visible hover:bg-blue-400 sm:max-h-fit sm:max-w-fit md:max-h-60 md:max-w-2xl ">
               <div className="flex space-x-4">
                 <svg className="svg-icon h-12 w-12" viewBox="0 0 20 20">
                   <path d="M17.896,12.706v-0.005v-0.003L15.855,2.507c-0.046-0.24-0.255-0.413-0.5-0.413H4.899c-0.24,0-0.447,0.166-0.498,0.4L2.106,12.696c-0.008,0.035-0.013,0.071-0.013,0.107v4.593c0,0.28,0.229,0.51,0.51,0.51h14.792c0.28,0,0.51-0.229,0.51-0.51v-4.593C17.906,12.77,17.904,12.737,17.896,12.706 M5.31,3.114h9.625l1.842,9.179h-4.481c-0.28,0-0.51,0.229-0.51,0.511c0,0.703-1.081,1.546-1.785,1.546c-0.704,0-1.785-0.843-1.785-1.546c0-0.281-0.229-0.511-0.51-0.511H3.239L5.31,3.114zM16.886,16.886H3.114v-3.572H7.25c0.235,1.021,1.658,2.032,2.75,2.032c1.092,0,2.515-1.012,2.749-2.032h4.137V16.886z"></path>
                 </svg>
                 {/* make photo logo here */}
-                <h1 className="text-3xl font-bold text-indigo-800">{name}</h1>
+                <h1 className="text-xl font-bold text-indigo-800 sm:text-2xl md:text-3xl">
+                  {name}
+                </h1>
               </div>
-              <h2 className="text-left text-3xl text-slate-700">{job}</h2>
+              <h2 className="text-left text-3xl text-slate-700 sm:text-xl">
+                {job}
+              </h2>
 
-              <div className="max-w-md overflow-auto break-words text-left">
+              <div className="max-w-md overflow-auto break-words text-left sm:text-sm">
                 <p className=" ">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Phasellus at ipsum mauris. Duis porttitor dui nec nulla porta,
